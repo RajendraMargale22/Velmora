@@ -1,0 +1,24 @@
+/* style.css */
+
+@import url("./navbar.css");
+@import url("./footer.css");
+@import url("./home.css");
+@import url("./listing.css");
+
+
+
+/* Main Body Page : boilerplate.ejs */
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+
+

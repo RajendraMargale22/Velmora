@@ -1,0 +1,244 @@
+
+/*Index Page,  Listing Cards  : index.ejs */
+
+/* ================= FILTERS ================= */
+
+.filters-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#filters {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    flex: 1;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+
+#filters::-webkit-scrollbar {
+    display: none;
+}
+
+.filter {
+    flex: 0 0 auto;
+    text-align: center;
+    margin-right: 1.5rem;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+    transform: translateY(-2px);
+    transition: 0.2s ease;
+}
+
+.filter p {
+    font-size: 0.8rem;
+}
+
+.hgi {
+    font-size: 1.3rem !important;
+}
+
+.tax-toggle {
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 0.7rem 1rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.tax-info {
+    display: none;
+}
+
+/* ================= LISTINGS ================= */
+
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+    transition: 0.3s ease;
+}
+
+.listing-card:hover {
+    transform: scale(1.02);
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    height: 18rem;
+    object-fit: cover !important;
+}
+
+.card-body {
+    padding: 0.5rem !important;
+}
+
+.card-text {
+    margin: 0;
+}
+
+.listing-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Overlay effect FIXED */
+.card-img-overlay {
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.listing-card:hover .card-img-overlay {
+    opacity: 0.1;
+    background-color: white;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    .filters-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tax-toggle {
+        margin-top: 1rem;
+    }
+}
+
+
+
+
+
+/* New Page : new.ejs */
+
+.add-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+.add-btn:hover {
+transform: scale(1.05);
+box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+transition: 0.3s ease;
+}
+
+
+
+
+/* Edit Page : edit.ejs */
+
+.saveEdit-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+.saveEdit-btn :hover {
+transform: scale(1.05);
+box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+transition: 0.3s ease;
+}
+
+.preview-img {
+    width: 200px;              /* small preview */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    filter: blur(1px) brightness(0.9);
+    transition: 0.3s ease;
+}
+
+.preview-img:hover {
+    filter: blur(0);           /* clear on hover */
+    transform: scale(1.05);
+}
+
+
+
+
+/* Show Page : show.ejs */
+
+.show-img {
+    height: 50vh !important;
+}
+
+.show-btn {
+    /* background-color: #fe424d !important; */
+    /* border: none !important; */
+    padding: 0.5rem 1.5rem;
+    white-space: nowrap;
+}
+
+.show-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    transition: 0.3s ease;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.showCard-title {
+    font-size: 1.5rem;
+}
+
+.show-btns{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+}
+
+
+/* Star Rating */
+
+.star-rating{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.star{
+    color: #ccc;
+    transition: color 0.2s ease;
+}
+
+.star.active{
+    color: #fe424d;
+}
+
+
+/* Review Stars */
+
+.review-stars{
+    font-size: 1.2rem;
+}
+
+.review-star-filled{
+    color: #fe424d;
+}
+
+.review-star-empty{
+    color: #ddd;
+}
+
+
+/* Map */
+
+#map {
+    height: 400px;
+    width: 100%;
+}

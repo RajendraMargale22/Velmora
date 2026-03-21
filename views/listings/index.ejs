@@ -1,0 +1,117 @@
+
+<!-- this line will act as boilerplate code for this file  -->
+ <!-- and linked to layouts/boilerplate , the remaining code that is same for every page will be render from boilerplate file
+ and this file only render the following code on index route -->
+<% layout("/layouts/boilerplate") %>
+
+
+<body>
+
+    <div class="filters-wrapper">
+
+        <!-- Filters (scrollable) -->
+        <div id="filters">
+            <!-- all your filter divs here -->
+             <div class="filter">
+                <div><i class="fa-solid fa-fire"></i></div>
+                <p>Trending</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-bed"></i></div>
+                <p>Rooms</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-mountain-city"></i></div>
+                <p>Iconic Cities</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-mountain"></i></div>
+                <p>Mountains</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-umbrella-beach"></i></div>
+                <p>Beaches</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-brands fa-fort-awesome"></i></div>
+                <p>castles</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-person-swimming"></i></div>
+                <p>Amazing Pools</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-campground"></i></div>
+                <p>Camping</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-cow"></i></div>
+                <p>Farms</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-igloo"></i></div>
+                <p>Arctic</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-tree"></i></div>
+                <p>Forest</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-sailboat"></i></div>
+                <p>Boats</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-landmark-dome"></i></div>
+                <p>Domes</p>
+            </div>
+            <div class="filter">
+                <div><i class="hgi hgi-stroke hgi-cactus"></i></div>
+                <p>Deserts</p>
+            </div>
+            <div class="filter">
+                <div><i class="hgi hgi-stroke hgi-island"></i></div>
+                <p>Islands</p>
+            </div>
+        </div>
+
+        <!-- Tax Toggle -->
+        <div class="tax-toggle">
+            <div class="form-check-reverse form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+                <label class="form-check-label" for="switchCheckDefault">
+                    Display total after Taxes
+                </label>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- All Listings -->
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+        <!-- listings are stored in array so use for-of loop  -->
+        <% for(let listing of allListing ){ %>  
+        <a href="/listings/<%= listing._id %>" class="listing-link">
+            <div class="card col listing-card" >
+                <img src="<%= listing.image.url %>" class="card-img-top" alt="listing-image of <%= listing.title %>" style="height: 18rem;">
+                <div class="card-img-overlay"></div>
+                <div class="card-body ms-2">
+                    <p class="card-text"> <b> <%= listing.title %>  </b></p>
+                    <!-- <p><%= listing.description %></p> -->
+                    <p> <%= listing.location %> , <%= listing.country %></p>
+                    <p>
+                        Price : &#8377;
+                        <span class="price" data-price="<%= listing.price %>">
+                            <%= listing.price.toLocaleString("en-IN") %>
+                        </span> night 
+                        <i class="tax-info" style="display: none;"> &nbsp; (18% GST Included)</i>
+                    </p>
+                </div>
+            </div>
+        </a> 
+        <% } %>
+    </div>
+    
+    
+</body>

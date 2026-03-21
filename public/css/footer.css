@@ -1,0 +1,70 @@
+
+/* Footer  : footer.ejs */
+
+.f-info {
+    text-align: center;
+    display: flex;
+    min-height: 8rem;
+    background-color: #f8f9fa;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+}
+
+/* Sections */
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Brand */
+.f-info-brand {
+    font-weight: 500;
+    color: #555;
+}
+
+/* Links */
+.f-info-links a {
+    text-decoration: none;
+    color: #222;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+/* FIXED hover (your previous had space issue) */
+.f-info-links a:hover {
+    color: #fe424d;
+    text-decoration: underline;
+}
+
+/* Social Icons */
+.f-info-socials i {
+    font-size: 1.3rem;
+    margin: 0 10px;
+    color: #555;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effects */
+.f-info-socials i:hover {
+    color: #fe424d;
+    transform: translateY(-4px) scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .f-info {
+        gap: 0.5rem;
+    }
+
+    .f-info-links {
+        flex-wrap: wrap;
+    }
+}

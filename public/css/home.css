@@ -1,0 +1,108 @@
+
+/* === HOME PAGE : home.ejs === */
+
+/* .hero {
+    height: 80vh;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.3)
+    ),
+    url("https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg") center/cover no-repeat;
+    
+    /* url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e")
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee")
+    url("https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg") */ /*
+    color: white;
+    border-radius: 10px;
+} */
+
+.hero {
+    height: 80vh;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+}
+
+.search-input {
+    width: 300px;
+    border-radius: 50px;
+    padding: 0.6rem 1rem;
+}
+
+/* Categories */
+.category-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: #f8f9fa;
+    transition: 0.3s;
+}
+
+.category-card i {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #fe424d;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+/* Cards */
+.home-card {
+    border: none !important;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.home-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.home-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 .75rem 1.5rem rgba(0,0,0,.15);
+}
+
+/* Why Choose Velmora Travel destination Section */
+.inspire-card {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.inspire-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* CTA */
+.cta {
+    background: #f8f9fa;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}

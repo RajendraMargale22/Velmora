@@ -84,7 +84,7 @@ cd Velmora
 
 2. Install dependencies
 
-npm install
+npm install --legacy-peer-deps
 
 
 3. Run the app

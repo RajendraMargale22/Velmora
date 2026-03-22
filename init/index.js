@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 const initData = require("./data");
 const Listing = require("../models/listing");
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/velmora";
+// const MONGO_URL = "mongodb://127.0.0.1:27017/velmora";
+const MONGO_URL = process.env.ATLASDB_URL;
 
 async function main() {
     await mongoose.connect(MONGO_URL);

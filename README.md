@@ -63,11 +63,11 @@ Velmora/
 
 Create a `.env` file in root:
 
-ATLASDB_URL=your_mongodb_connection_string
-SECRET=your_session_secret
-CLOUD_NAME=your_cloudinary_name
-CLOUD_API_KEY=your_cloudinary_key
-CLOUD_API_SECRET=your_cloudinary_secret
+ATLASDB_URL=your_mongodb_connection_string, 
+SECRET=your_session_secret, 
+CLOUD_NAME=your_cloudinary_name, 
+CLOUD_API_KEY=your_cloudinary_key, 
+CLOUD_API_SECRET=your_cloudinary_secret, 
 MAP_TOKEN=your_mapbox_token
 
 

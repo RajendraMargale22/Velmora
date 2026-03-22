@@ -38,7 +38,7 @@ const userRouter = require("./routes/user.js");
 const app = express();
 const PORT = 8080;
 
-const DB_URL = process.env.ATLAS_URL;
+const DB_URL = process.env.ATLASDB_URL;
 
 
 const store = MongoStore.create({

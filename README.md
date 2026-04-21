@@ -104,8 +104,9 @@ node app.js || nodemon app.js || npm start
 
 4. Open in browser
 
+```
 http://localhost:8080
-
+```
 
 
 ---

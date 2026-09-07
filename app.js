@@ -36,7 +36,7 @@ const userRouter = require("./routes/user.js");
 // ================= Important CODES =================
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 const DB_URL = process.env.ATLASDB_URL;
 
@@ -128,6 +128,12 @@ app.get("/", async (req, res) => {
     // let listings = await Listing.aggregate([{ $sample: { size: 6 } }]);
     let listings = await Listing.find({}).limit(6);  // fetch from DB
     res.render("home", { listings });  // pass to EJS
+});
+
+
+// Uptime Robot
+app.get("/health", (req, res) => {
+    res.status(200).json({ status: "ok" });
 });
 
 
